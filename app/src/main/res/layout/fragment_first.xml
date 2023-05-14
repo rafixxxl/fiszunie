@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <Button
+        android:id="@+id/button_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wordView"
+        app:layout_constraintVertical_bias="0.633" />
+
+    <Button
+        android:id="@+id/flashcardView"
+        android:layout_width="331dp"
+        android:layout_height="283dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="#F6F6F6"
+        android:contentDescription="flashcard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/wordView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:elevation="10dp"
+        android:text="Word"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/flashcardView" />
+
+    <TextView
+        android:id="@+id/sentenceView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:elevation="10dp"
+        android:text="Sentence containing ___."
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/flashcardView"
+        app:layout_constraintStart_toStartOf="@+id/flashcardView"
+        app:layout_constraintTop_toBottomOf="@+id/wordView" />
+
+    <TextView
+        android:id="@+id/translationView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:elevation="10dp"
+        android:text="Translation of the sentence"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/flashcardView"
+        app:layout_constraintStart_toStartOf="@+id/flashcardView"
+        app:layout_constraintTop_toBottomOf="@+id/sentenceView" />
+
+    <EditText
+        android:id="@+id/answerView"
+        android:layout_width="275dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Translation"
+        android:textColor="#CDCDCD"
+        app:layout_constraintStart_toStartOf="@+id/flashcardView"
+        app:layout_constraintTop_toBottomOf="@+id/flashcardView" />
+
+    <Button
+        android:id="@+id/okButton"
+        android:layout_width="56dp"
+        android:layout_height="48dp"
+        android:text="OK"
+        app:layout_constraintEnd_toEndOf="@+id/flashcardView"
+        app:layout_constraintTop_toTopOf="@+id/answerView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
